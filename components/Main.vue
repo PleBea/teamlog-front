@@ -35,7 +35,7 @@ export default {
     let subtitle = ["Feel", "the", "Change", "Make", "The", "Change"]
     let show = false
     config = {
-      "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/static/images/${config}")`
+      "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/images/${config}")`
     }
 
     return{ 
