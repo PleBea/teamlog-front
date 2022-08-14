@@ -1,13 +1,13 @@
 <template>
   <div>
-    <Main/>
+    <Main></Main>
   </div>
 </template>
 
 <script>
-import Curriculum from '../components/Curriculum.vue';
+import Main from '../components/Main.vue';
 export default {
     name: "IndexPage",
-    components: { Curriculum }
+    components: { Main }
 }
 </script>
