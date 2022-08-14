@@ -15,14 +15,4 @@ export default {
 </script>
 
 <style>
-/* .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    background-color: #dddddd;
-
-    width: 100%;
-    height: 100px;
-} */
 </style>
