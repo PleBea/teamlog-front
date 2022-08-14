@@ -3,19 +3,17 @@
     height: 100vh;
 
     &_button {
-        padding: 5px 10px;
+        padding: 5px 15px;
         font-family: 'Noto Sans', sans-serif;
         font-size: 12px;
-        font-weight: 300;
-        color: var(--white_4);
+        font-weight: 500;
+        color: var(--white_2);
         font-size: 20px;
-        font-weight: 700;
-        text-transform: uppercase;
         border: 0;
         outline: 0;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        border-bottom: var(--white_4) solid 2px;
+        border-bottom: var(--white_2) solid 2px;
         background-color:transparent;
 
         &:hover {
@@ -66,21 +64,20 @@
         transform: translate(-50%, -50%);
         text-align: center;
 
-        &_titlebox {
-            &:hover > .main_wrapper_title {
-                transform: translate(0, -10px);
-                opacity: 0.5;
-            }
-            
-            &:hover > .main_wrapper_subtitle {
-                transform: translate(0, -20px);
-                opacity: 0.5;
-            }
+        
+        &:hover .main_wrapper_title {
+            transform: translate(0, -30px);
+            opacity: 0.5;
+        }
+        
+        &:hover .main_wrapper_subtitle {
+            transform: translate(0, -50px);
+            opacity: 0.5;
+        }
 
-            &:hover > .main_wrapper_button {
-                transform: translate(0, -30px);
-                opacity: 0.5;
-            }
+        &:hover > .main_wrapper_button {
+            transform: translate(0, -60px);
+            opacity: 1;
         }
 
         &_title {
@@ -113,6 +110,8 @@
             gap: 10px;
             justify-content: center;
             margin-top: 30px;
+            transition: 0.3s;
+            opacity: 0;
         }
     }
 
