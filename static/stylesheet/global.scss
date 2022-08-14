@@ -1,0 +1,24 @@
+@import "./fonts.scss";
+@import "./style.scss";
+@import "./animation.scss";
+:root {
+    --black_1: #000000;
+    --black_2: #0c0c0c;
+    --black_3: #1a1a1a;
+    --black_4: #2f2f2f;
+    --black_5: #444444;
+    --white_1: #ffffff;
+    --white_2: #f2f2f2;
+    --white_3: #e6e6e6;
+    --white_4: #cccccc;
+    --white_5: #b3b3b3;    
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgb(20, 23, 32);
+    color: var(--black_1);
+}
+
