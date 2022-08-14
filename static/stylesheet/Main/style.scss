@@ -120,4 +120,25 @@
             background-image: none !important;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        &_wrapper {
+            &_title {
+                & p {
+                    font-size: 50px;
+                }
+            }
+            &_subtitle {
+                & p {
+                    font-size: 18px;
+                }
+            }
+            &_button {
+                & button {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
 }
