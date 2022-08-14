@@ -140,21 +140,25 @@
                 }
             }
 
-            &:hover .main_wrapper_title {
-                transform: translate(0, -30px);
-                opacity: 0.5;
-            }
-
-            &:hover .main_wrapper_subtitle {
-                transform: translate(0, -50px);
-                opacity: 0.5;
-            }
-
-            &:hover > .main_wrapper_button {
-                transform: translate(0, -60px);
-                opacity: 1;
-            }
             
+
+        }
+    }
+
+    @media (hover: none) and (pointer: coarse) {
+        &:hover .main_wrapper_title {
+            transform: translate(0, -30px);
+            opacity: 0.5;
+        }
+
+        &:hover .main_wrapper_subtitle {
+            transform: translate(0, -50px);
+            opacity: 0.5;
+        }
+
+        &:hover > .main_wrapper_button {
+            transform: translate(0, -60px);
+            opacity: 1;
         }
     }
 }
