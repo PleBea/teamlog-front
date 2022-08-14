@@ -18,9 +18,11 @@ export default {
     ]
   },
 
+  target: 'static',
+
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/static/stylesheet/global.scss'
+    '~static/stylesheet/global.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -32,7 +34,6 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    'nuxt-vite'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -41,6 +42,6 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    extractCSS: true
+    extractCSS: false
   }
 }

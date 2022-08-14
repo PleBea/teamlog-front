@@ -51,4 +51,4 @@ export default {
 }
 </script>
 
-<style src="@/static/stylesheet/Main/style.scss"></style> 
+<style src="@/static/stylesheet/Main/style.scss" lang="scss"></style> 
