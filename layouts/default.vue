@@ -1,16 +1,17 @@
 <template>
   <div>
-    <div class="header">
-        
-    </div>
+    <Header></Header>
 
     <Nuxt/>
   </div>
 </template>
 
 <script>
-export default {
+import Header from '../components/Header.vue';
 
+export default {
+  name: 'IndexPage',
+  components: { Header }
 }
 </script>
 

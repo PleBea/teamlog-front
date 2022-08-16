@@ -27,10 +27,11 @@
         </div>
 
         <div class="main_wrapper_button">
-          <button @click="redirect(i.url)" v-for="(i, g) in button_list"
+          <nuxt-link :to="{path: `/${i.url}`}" v-for="(i, g) in button_list"
           :key="g"
           class="main_button"
-          >{{ i.name }}</button>
+          tag="button"
+          >{{ i.name }}</nuxt-link>
         </div>
 
       </div>
