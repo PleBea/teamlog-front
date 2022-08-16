@@ -5,3 +5,8 @@
     }
     to { opacity: 1 }
 }
+
+@keyframes ani{
+    0%{transform:translate(0,0);}
+    100%{transform:translate(0,8px);}
+}

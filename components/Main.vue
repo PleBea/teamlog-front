@@ -20,12 +20,17 @@
           >{{ i }}</p>
         </div>
 
+        <hr class="main_hr">
+
+        <div class="main_hover_mouse">
+          <p>- 마우스를 올려주세요 -</p>
+        </div>
 
         <div class="main_wrapper_button">
-          <button v-for="(i, g) in button_list"
+          <button @click="redirect(i.url)" v-for="(i, g) in button_list"
           :key="g"
           class="main_button"
-          >{{ i }}</button>          
+          >{{ i.name }}</button>
         </div>
 
       </div>
@@ -42,7 +47,20 @@ export default {
     let config = config_json.background_img
     let title  = ["TEAM", "LOG"]
     let subtitle = ["Feel", "the", "Change", "Make", "The", "Change"]
-    let button_list = ["소개", "커리큘럼", "합격자 목록"]
+    let button_list = {
+      "Introduce": {
+        "url": "introduce",
+        "name": "소개"
+      },
+      "Curriculum": {
+        "url": "curriculum",
+        "name": "커리큘럼"
+      },
+      "Successful": {
+        "url": "successful",
+        "name": "합격자 목록"
+      }
+    }
     let application = [Date.parse(config_json.club_application_start), Date.parse(config_json.club_application_end)]
     let now = new Date()
     let show = false
@@ -54,12 +72,17 @@ export default {
       button_list.push('지원하기')
     }
 
+    function redirect(i) {
+      window.location.href = `/${i}`
+    }
+
     return{ 
       config,
       title,
       subtitle,
       show,
-      button_list
+      button_list,
+      redirect
     }
   },
   mounted() {

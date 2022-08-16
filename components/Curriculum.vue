@@ -1,6 +1,6 @@
 <template>
   <div class="curriculum">
-    
+    <div class="curriculum_wrappaer"></div>
   </div>
 </template>
 

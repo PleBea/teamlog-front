@@ -6,7 +6,7 @@
         padding: 5px 15px;
         font-family: 'Noto Sans', sans-serif;
         font-size: 12px;
-        font-weight: 500;
+        font-weight: bold;
         color: var(--white_2);
         font-size: 20px;
         border: 0;
@@ -80,6 +80,16 @@
             opacity: 1;
         }
 
+        &:hover .main_hover_mouse {
+            opacity: 0;
+        }
+
+        &:hover .main_hr {
+            transform: translate(0, -60px);
+            opacity: 0.5;
+        }
+
+
         &_title {
             display: flex;
             gap: 20px;
@@ -109,7 +119,6 @@
             display: flex;
             gap: 10px;
             justify-content: center;
-            margin-top: 30px;
             transition: 0.3s;
             opacity: 0;
         }
@@ -160,5 +169,32 @@
             transform: translate(0, -60px);
             opacity: 1;
         }
+    }
+
+    &_hover_mouse {
+        margin-top: 20px;
+        font-size: 20px;
+        color: rgb(203, 203, 203);
+        display: flex;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+
+        & p{
+            font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
+            font-weight: 500;
+        }
+
+        animation:ani 1s infinite alternate; 
+        transition: 0.2s;
+
+        img {
+            height:25px;
+        }
+    }
+
+    &_hr {
+        margin-top: 20px;
+        transition: 0.3s;
     }
 }
