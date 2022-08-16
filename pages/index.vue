@@ -8,6 +8,7 @@
 import Main from '../components/Main.vue';
 export default {
     name: "IndexPage",
-    components: { Main }
+    components: { Main },
+    layout: 'main'
 }
 </script>

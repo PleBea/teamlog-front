@@ -1,6 +1,8 @@
 <template>
   <div class="curriculum">
-    <div class="curriculum_wrappaer"></div>
+    <div class="curriculum_wrapper">
+      
+    </div>
   </div>
 </template>
 

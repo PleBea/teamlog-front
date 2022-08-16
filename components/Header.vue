@@ -1,6 +1,6 @@
 <template>
     <div class="header">
-        
+        <p>ㅁㄴㅁ</p>
     </div>
 </template>
 

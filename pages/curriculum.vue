@@ -1,6 +1,6 @@
 <template>
     <div>
-        
+        <Curriculum></Curriculum>
     </div>
 </template>
 
