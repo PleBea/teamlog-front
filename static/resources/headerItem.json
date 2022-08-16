@@ -1,0 +1,18 @@
+{
+    "Introduce": {
+      "url": "/introduce",
+      "name": "소개"
+    },
+    "Curriculum": {
+      "url": "/curriculum",
+      "name": "커리큘럼"
+    },
+    "Award": {
+      "url": "/awards",
+      "name": "수상"
+    },
+    "Successful": {
+      "url": "/successful",
+      "name": "합격자 목록"
+    }
+}
