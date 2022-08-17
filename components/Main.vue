@@ -27,7 +27,7 @@
         </div>
 
         <div class="main_wrapper_button">
-          <nuxt-link :to="{path: `/${i.url}`}" v-for="(i, g) in button_list"
+          <nuxt-link :to="{path: i.url }" v-for="(i, g) in header_item"
           :key="g"
           class="main_button"
           tag="button"
@@ -41,6 +41,7 @@
 
 <script>
 import config_json from "@/static/resources/config.json";
+import header_item from "@/static/resources/headerItem.json";
 
 export default {
   name: "Main",
@@ -48,20 +49,6 @@ export default {
     let config = config_json.background_img
     let title  = ["TEAM", "LOG"]
     let subtitle = ["Feel", "the", "Change", "Make", "The", "Change"]
-    let button_list = {
-      "Introduce": {
-        "url": "introduce",
-        "name": "소개"
-      },
-      "Curriculum": {
-        "url": "curriculum",
-        "name": "커리큘럼"
-      },
-      "Successful": {
-        "url": "successful",
-        "name": "합격자 목록"
-      }
-    }
     let application = [Date.parse(config_json.club_application_start), Date.parse(config_json.club_application_end)]
     let now = new Date()
     let show = false
@@ -73,17 +60,12 @@ export default {
       button_list.push('지원하기')
     }
 
-    function redirect(i) {
-      window.location.href = `/${i}`
-    }
-
     return{ 
       config,
       title,
       subtitle,
       show,
-      button_list,
-      redirect
+      header_item
     }
   },
   mounted() {
