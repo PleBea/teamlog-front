@@ -59,8 +59,9 @@
 
     &_wrapper {
         position: absolute;
-        top: 48%;
+        top: 50%;
         left: 50%;
+        max-width: 80%;
         transform: translate(-50%, -50%);
         text-align: center;
 
@@ -78,6 +79,7 @@
         &:hover > .main_wrapper_button {
             transform: translate(0, -60px);
             opacity: 1;
+            pointer-events: all;
         }
 
         &:hover .main_hover_mouse {
@@ -117,10 +119,11 @@
 
         &_button {
             display: flex;
-            gap: 10px;
+            gap: 15px;
             justify-content: center;
             transition: 0.3s;
             opacity: 0;
+            pointer-events: none;
         }
     }
 
