@@ -1,5 +1,7 @@
 <template>
-
+    <div class="successful">
+        
+    </div>
 </template>
 
 <script>
