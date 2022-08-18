@@ -57,7 +57,7 @@ export default {
     }
 
     if (now >= application[0] && now <= application[1]) {
-      button_list.push('지원하기')
+      header_item.push('지원하기')
     }
 
     return{ 

@@ -66,31 +66,32 @@
         text-align: center;
 
         
-        &:hover .main_wrapper_title {
-            transform: translate(0, -30px);
-            opacity: 0.5;
+        @media screen and (hover: hover) {
+            &:hover .main_wrapper_title {
+                transform: translate(0, -30px);
+                opacity: 0.5;
+            }
+            
+            &:hover .main_wrapper_subtitle {
+                transform: translate(0, -50px);
+                opacity: 0.5;
+            }
+    
+            &:hover > .main_wrapper_button {
+                transform: translate(0, -60px);
+                opacity: 1;
+            }
+    
+            &:hover .main_hover_mouse {
+                opacity: 0;
+            }
+    
+            &:hover .main_hr {
+                transform: translate(0, -60px);
+                opacity: 0.5;
+            }    
         }
         
-        &:hover .main_wrapper_subtitle {
-            transform: translate(0, -50px);
-            opacity: 0.5;
-        }
-
-        &:hover > .main_wrapper_button {
-            transform: translate(0, -60px);
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        &:hover .main_hover_mouse {
-            opacity: 0;
-        }
-
-        &:hover .main_hr {
-            transform: translate(0, -60px);
-            opacity: 0.5;
-        }
-
 
         &_title {
             display: flex;
@@ -122,8 +123,7 @@
             gap: 15px;
             justify-content: center;
             transition: 0.3s;
-            opacity: 0;
-            pointer-events: none;
+            opacity: 1;
         }
     }
 
@@ -157,20 +157,26 @@
         }
     }
 
-    @media (hover: none) and (pointer: coarse) {
-        &:hover .main_wrapper_title {
-            transform: translate(0, -30px);
-            opacity: 0.5;
+    @media screen and (hover: hover) {
+        .main_wrapper_button {
+            opacity: 0;
         }
-
-        &:hover .main_wrapper_subtitle {
-            transform: translate(0, -50px);
-            opacity: 0.5;
-        }
-
-        &:hover > .main_wrapper_button {
-            transform: translate(0, -60px);
+        .main_hover_mouse {
             opacity: 1;
+        }
+    }
+    @media screen and (hover: none) {
+        .main_button {
+            border: 2px solid var(--white_2);
+            border-radius: 8px;
+        
+            animation: 1s infinite alternate; 
+            transition: 0.2s;
+
+            margin-top: 30px;
+        }
+        .main_hover_mouse {
+            display: none;
         }
     }
 
@@ -182,6 +188,7 @@
         gap: 5px;
         justify-content: center;
         align-items: center;
+        opacity: 0;
 
         & p{
             font-family: 나눔스퀘어, 'NanumSquare', sans-serif;
