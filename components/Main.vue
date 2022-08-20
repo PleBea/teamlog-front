@@ -57,9 +57,11 @@ export default {
       "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/images/${config}")`
     }
 
-
     if (now >= application[0] && now <= application[1]) {
-      header.push('지원하기')
+      header.push({
+        url: "/application",
+        name: "신청하기"
+      })
     }
 
     return{ 
