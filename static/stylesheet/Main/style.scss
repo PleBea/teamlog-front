@@ -98,6 +98,7 @@
             gap: 20px;
             margin-bottom: 10px;
             transition: 0.3s;
+            justify-content: center;
 
             & p {
                 font-size: 76px;
@@ -147,7 +148,7 @@
             }
             &_button {
                 & button {
-                    font-size: 14px;
+                    font-size: 12px;
                     padding: 5px 10px;
                 }
             }
@@ -173,7 +174,7 @@
             animation: 1s infinite alternate; 
             transition: 0.2s;
 
-            margin-top: 30px;
+            margin-top: 20px;
         }
         .main_hover_mouse {
             display: none;

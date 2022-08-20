@@ -27,7 +27,7 @@
         </div>
 
         <div class="main_wrapper_button">
-          <nuxt-link :to="{path: i.url }" v-for="(i, g) in header_item"
+          <nuxt-link :to="{path: i.url }" v-for="(i, g) in header"
           :key="g"
           class="main_button"
           tag="button"
@@ -52,12 +52,14 @@ export default {
     let application = [Date.parse(config_json.club_application_start), Date.parse(config_json.club_application_end)]
     let now = new Date()
     let show = false
+    let header = header_item.header
     config = {
       "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/images/${config}")`
     }
 
+
     if (now >= application[0] && now <= application[1]) {
-      header_item.push('지원하기')
+      header.push('지원하기')
     }
 
     return{ 
@@ -65,7 +67,7 @@ export default {
       title,
       subtitle,
       show,
-      header_item
+      header
     }
   },
   mounted() {
