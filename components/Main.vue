@@ -41,11 +41,11 @@
 
 <script>
 import config_json from "@/static/resources/config.json";
-import header_item from "@/static/resources/headerItem.json";
 
 export default {
   name: "Main",
   setup() {
+    let header_item = require('@/static/resources/headerItem.json');
     let config = config_json.background_img
     let title  = ["TEAM", "LOG"]
     let subtitle = ["Feel", "the", "Change", "Make", "The", "Change"]
@@ -53,15 +53,18 @@ export default {
     let now = new Date()
     let show = false
     let header = header_item.header
+    let application_object = {
+      url: "/application",
+      name: "신청하기"
+    }
     config = {
       "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/images/${config}")`
     }
 
-    if (now >= application[0] && now <= application[1]) {
-      header.push({
-        url: "/application",
-        name: "신청하기"
-      })
+    console.log(header)
+
+    if (now >= application[0] && now <= application[1] && header.length < 5) {
+      header.push(application_object)
     }
 
     return{ 

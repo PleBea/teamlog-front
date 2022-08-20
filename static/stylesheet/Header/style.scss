@@ -18,11 +18,14 @@
         display: flex;
         gap: 2.5vw;
         margin-left: auto;
+
+        @media screen and (max-width: 768px) {
+            font-size: 14px;
+        }
     }
 
     &_underline {
         text-decoration: underline !important;
-        text-underline-position: under;
         text-decoration-thickness: 2px;
     }
 

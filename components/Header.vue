@@ -8,7 +8,7 @@
         </nuxt-link>
         <div class="header_right">
             <nuxt-link
-            v-for="(i,k) in header_item"
+            v-for="(i,k) in header"
             :key="k"
             :to="{path: i.url}"
             :class="{header_underline: i.url == $nuxt.$route.path}"
@@ -23,8 +23,10 @@ import header_item from '@/static/resources/headerItem.json';
 export default {
     setup() {
 
+        let header = header_item.header;
+
         return {
-            header_item
+            header
         }
     }
 }
