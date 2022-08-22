@@ -61,8 +61,6 @@ export default {
       "background-image": `linear-gradient(rgba(20, 23, 32, 0.6), rgba(20, 23, 32, 0.6)), url("/images/${config}")`
     }
 
-    console.log(header)
-
     if (now >= application[0] && now <= application[1] && header.length < 5) {
       header.push(application_object)
     }
