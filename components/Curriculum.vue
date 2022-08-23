@@ -7,8 +7,7 @@
         class="curriculum_item" 
         v-for="(i, k) in curriculum"
         :key="k"
-        :style="{animationDelay: `${k*100}ms`}"
-        >
+        :style="{animationDelay: `${k*100}ms`}">
           <h1>{{ i.name }}</h1>
           <p>{{ i.description }}</p>
         </div>
