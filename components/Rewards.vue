@@ -4,8 +4,8 @@
       <a v-for="(i, n) in rewards"
       :key="n"
       :class="{reward_underline: selected == n}"
-      @click="change(n)">
-      {{ i.year }}</a>
+      @click="change(n)"
+      >{{ i.year }}</a>
 
       <p v-for="(i, k) in reward_list"
       :key="k">{{ i }}</p>
