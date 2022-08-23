@@ -89,7 +89,7 @@
             &:hover .main_hr {
                 transform: translate(0, -60px);
                 opacity: 0.5;
-            }    
+            }
         }
         
 
@@ -176,6 +176,10 @@
 
             animation: 1s infinite alternate; 
             transition: 0.2s;
+        }
+        .main_button:hover {
+            color: var(--white_1);
+            background-color: var(--white_3);
         }
         .main_wrapper_button {
             margin-top: 20px;
