@@ -18,16 +18,33 @@
 </template>
 
 <script>
-import header_item from '@/static/resources/headerItem.json';
+import config_json from '@/static/resources/config.json';
 
 export default {
-    setup() {
-
-        let header = header_item.header;
-
+    name: 'Header',
+    data() {
         return {
-            header
+            header: {}
         }
+    },
+    methods: {
+
+    },
+    mounted() {
+        let header_item = require('@/static/resources/headerItem.json');
+        let tmp = header_item.header;
+        let now = new Date()
+        let application = [Date.parse(config_json.club_application_start), Date.parse(config_json.club_application_end)]
+        let application_object = {
+            url: "/application",
+            name: "신청하기"
+        }
+
+        if (now >= application[0] && now <= application[1] && tmp.length < 5) {
+            tmp.push(application_object)
+        }
+
+        this.header = tmp
     }
 }
 </script>
