@@ -14,13 +14,16 @@
     --white_5: #b3b3b3;    
 
     --base_1: rgb(20, 23, 32);
+    --base_2: rgb(28, 32, 42);
+
+    --line_1: rgb(222, 185, 21);
 }
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    background-color: var(--base_1);
+    background-color: var(--base_2);
     color: var(--black_1);
 }
 

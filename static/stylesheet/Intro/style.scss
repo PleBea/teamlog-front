@@ -8,11 +8,31 @@
         height: 100%;
 
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     &_title {
+        margin-top: 30px;
         color: var(--white_2);
-        font-size: 32px;
-        font-weight: 500;
+        font-size: 36px;
+        display: inline;
+        position: relative;
+        font-weight: 700;
+        text-shadow: -0.1px 0 #000, 0 0.1px #000, 0.1px 0 #000, 0 -0.1px #000;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            width: 100%;
+            height: 20px;
+            z-index: -1;
+            background-color: var(--line_1);
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 10px;
+        }
     }
 }
