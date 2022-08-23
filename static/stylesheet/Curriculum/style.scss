@@ -6,11 +6,57 @@
         padding-top: 80px;
         width: 100%;
         height: 100%;
+
+        &_item {
+            width: 100%;
+            height: 100%;
+            padding: 100px 10vw;
+            display: flex;
+            flex-wrap: wrap;
+            
+            justify-content: center;
+            align-items: center;
+            align-content: flex-start;
+            gap: 3vw;
+
+            @media screen and (max-width: 768px) {
+                padding-top: 30px;
+            }
+        }
     }
 
     &_item {
-        width: 200px;
-        margin: 10px;
-        background-color: white;
+        font-family: 'IBM Plex Sans', sans-serif;
+        width: 350px;
+        height: 20%;
+        background-color: var(--white_1);
+        border: solid 1px var(--black_1);
+        color: var(--black_1);
+        padding: 15px 20px;
+        border-radius: 10px;
+        animation: anim 1s both;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+        & h1 {
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+            display: inline;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 5px;
+                width: 100%;
+                height: 15px;
+                z-index: -1;
+                background-color: rgb(205, 243, 134);
+            }
+        }
+
+        & p {
+            margin-top: 10px;
+            font-weight: 400;
+        }
     }
 }

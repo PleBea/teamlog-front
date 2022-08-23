@@ -1,15 +1,19 @@
 <template>
   <div class="curriculum">
     <div class="curriculum_wrapper">
+      <div class="curriculum_wrapper_item">
 
-      <div 
-      class="curriculum_item" 
-      v-for="(i, k) in curriculum"
-      :key="k">
-        <h1>{{ i.name }}</h1>
-        <p>{{ i.description }}</p>
+        <div 
+        class="curriculum_item" 
+        v-for="(i, k) in curriculum"
+        :key="k"
+        :style="{animationDelay: `${k*100}ms`}"
+        >
+          <h1>{{ i.name }}</h1>
+          <p>{{ i.description }}</p>
+        </div>
+
       </div>
-
     </div>
   </div>
 </template>
