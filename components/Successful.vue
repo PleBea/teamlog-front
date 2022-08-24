@@ -10,6 +10,7 @@
                 class="successful_people"
                 v-for="(i, k) in successful"
                 :key="k"
+                :style="{animationDelay: `${k*100}ms`}"
                 >{{ i }}</p>
             </div>
 
