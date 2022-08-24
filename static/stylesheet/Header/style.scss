@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px;
+    height: var(--header_size);
     z-index: 1000;
 
     display: flex;

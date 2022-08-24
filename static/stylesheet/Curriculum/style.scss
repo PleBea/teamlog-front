@@ -3,7 +3,7 @@
     height: 100vh;
 
     &_wrapper {
-        padding-top: 80px;
+        padding-top: var(--header_size);
         width: 100%;
         height: 100%;
 
@@ -18,6 +18,10 @@
             align-items: center;
             align-content: flex-start;
             gap: 3vw;
+
+            @media screen and (max-width: 1024px) {
+                padding-top: 50px;
+            }
 
             @media screen and (max-width: 768px) {
                 padding-top: 30px;
