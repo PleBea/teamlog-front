@@ -1,7 +1,15 @@
 <template>
   <div class="introduce">
     <div class="introduce_wrapper">
-      <h1 class="introduce_title">Introduce</h1> 
+      <div class="introduce_content_wrapper">
+        <h1 class="introduce_title">Introduce</h1>
+
+        <div class="introduce_content">
+          <div class="introduce_content">
+            
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>

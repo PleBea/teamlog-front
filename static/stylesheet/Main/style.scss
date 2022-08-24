@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     height: 100vh;
+    background-color: var(--base_1);
 
     &_button {
         padding: 5px 15px;
@@ -178,7 +179,7 @@
             transition: 0.2s;
         }
         .main_button:hover {
-            color: var(--white_1);
+            color: var(--black_3);
             background-color: var(--white_3);
         }
         .main_wrapper_button {

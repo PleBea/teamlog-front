@@ -7,6 +7,11 @@
     --black_3: #1a1a1a;
     --black_4: #2f2f2f;
     --black_5: #444444;
+    --gray_1: #5f5f5f;
+    --gray_2: #7a7a7a;
+    --gray_3: #959595;
+    --gray_4: #b0b0b0;
+    --gray_5: #cbcbcb;
     --white_1: #ffffff;
     --white_2: #f2f2f2;
     --white_3: #e6e6e6;
@@ -16,14 +21,16 @@
     --base_1: rgb(20, 23, 32);
     --base_2: rgb(28, 32, 42);
 
-    --line_1: rgb(222, 185, 21);
+    --line_1: rgb(221, 165, 36);
+    --line_2: rgba(251, 195, 27, 0.5);
+
+    --shadow_1: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 body {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 16px;
     font-weight: 400;
-    background-color: var(--base_2);
-    color: var(--black_1);
+    background-color: var(--gray_5);
 }
 

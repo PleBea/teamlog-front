@@ -9,11 +9,12 @@
 
     padding: 0 4vw;
     align-items: center;
-    background-color: var(--base_1);
+    background-color: var(--white_1);
+    box-shadow: var(--shadow_1);
 
     & a{
         text-decoration: none;
-        color: var(--white_1);
+        color: var(--black_1);
     }
 
     &_right {
@@ -27,7 +28,7 @@
     }
 
     &_underline {
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid var(--black_3);
     }
 
     &_left {

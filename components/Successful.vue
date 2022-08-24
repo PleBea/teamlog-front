@@ -1,7 +1,9 @@
 <template>
     <div class="successful">
         <div class="successful_wrapper">
-            <h1 class="successful_title">축하드립니다!</h1>
+            <div class="successful_title_wrapper">
+                <h1 class="successful_title">축하드립니다!</h1>
+            </div>
 
             <div class="successful_wrapper_people">
                 <p 
