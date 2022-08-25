@@ -1,7 +1,27 @@
 {
   "title": "Teamlog 2022",
-  "king": ["양승찬", "010-2278-9517"],
-  "subking": ["박건우", "010-6367-7631"],
+  "king": [
+    {
+      "role": "부장",
+      "name": "양승찬", 
+      "tel": "010-2278-9517"
+    },
+    {
+      "role": "쀼장",
+      "name": "박건우", 
+      "tel": "010-6367-7631"
+    }
+  ],
+  "contact": [
+    {
+      "url": "https://www.facebook.com/sunrintog",
+      "img": "facebook.png"
+    },
+    {
+      "url":"https://github.com/Teamlog2022",
+      "img": "github.png"
+    }
+  ],
   "background_img": "teamlog_background.jpeg",
   "club_application": "sunrin",
   "club_application_start": "Jan 14, 2022 15:30:15 +0900",

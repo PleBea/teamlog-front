@@ -21,7 +21,8 @@
         <div 
         class="introduce_content introduce_special"
         v-for="(i, n) in special"
-        :key="n">
+        :key="n"
+        :style="{animationDelay: `${n*100}ms`}">
           <div class="introduce_special_wrapper">
             <img 
             class="introduce_special_image"
@@ -34,14 +35,36 @@
         </div>
       </div>
 
+      <h1 class="introduce_title introduce_contact_title">문의</h1>
+
+      <div class="introduce_icon">
+        <img 
+        v-for="(i, b) in contact"
+        :key="b"
+        @click="openUrl(i.url)"
+        :src="i.img" 
+        :style="{animationDelay: `100ms`}">
+      </div>
+      
+      <div class="introduce_content_wrapper">
+        <div
+        class="introduce_content introduce_contact"
+        v-for="(i, m) in king"
+        :key="m"
+        :style="{animationDelay: `${m*100}ms`}">
+          <p>{{ i.role }}</p>
+          <h1>{{ i.name }}</h1>
+          <p>{{ i.tel }}</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
 import config_json from '@/static/resources/config.json';
-import intro_json from "@/static/resources/intro.json"; 
-
+import intro_json from "@/static/resources/intro.json";
 
 export default {
     name: "Introduce",
@@ -51,16 +74,29 @@ export default {
         subking: config_json.subking,
         total: config_json.total_members,
         intro: intro_json.intro,
-        special: undefined
+        special: undefined,
+        king: config_json.king,
+        contact: undefined
       }
     },
-    methods: {
+    methods: { 
+      openUrl(url) {
+        window.open(url);
+      }
     },
     mounted() {
-      console.log(this.special)
-      if (this.special == undefined) {
-        this.special = intro_json.special;
+      let tmp
+      this.special = intro_json.special;
+      tmp = this.special[0].img;
+      if (!tmp.includes('images')){
         for (const element of this.special) {
+          element.img = `/images/${element.img}`;
+        }
+      }
+      this.contact = config_json.contact;
+      tmp = this.contact[0].img;
+      if (!tmp.includes('images')){
+        for (const element of this.contact) {
           element.img = `/images/${element.img}`;
         }
       }
